@@ -1,13 +1,60 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  height: 100vh;
+  min-height: 400px;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ColorBox {
+  height: 250px;
+  width: 250px;
+  border: 1px gray;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  word-wrap: normal;
+  padding: 10px;
+  overflow-wrap: anywhere;
+  overflow-y: hidden;
+  box-shadow: 2px 2px 5px rgba(20, 20, 20, 0.6),
+    10px 10px 15px rgba(20, 20, 20, 0.3);
+}
+
+.App h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.ColorInputBox {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ColorInputBox input {
+  font-size: 24px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px gray;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 5px rgba(20, 20, 20, 0.6),
+    10px 10px 15px rgba(20, 20, 20, 0.3);
+}
+
+.ColorInputBox input:focus {
+  outline: none;
 }

@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import ColorBox from "./ColorBox";
+import ColorInputBox from "./ColorInputBox";
+import {useState} from 'react';
+;
 
-function App() {
+const App = () => {
+  const [bgColor, setBgColor] = useState('');
+
+  const handleChange = (e) => {
+    setBgColor(e.target.value);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>React Color Picker</h3>
+      <ColorBox color={bgColor}/>
+      <ColorInputBox 
+        value={bgColor} 
+        onChange={handleChange}
+      />
     </div>
   );
 }
