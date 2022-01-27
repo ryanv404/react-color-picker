@@ -1,10 +1,19 @@
-const ColorBox = ({color}) => {
+const ColorBox = ({color, hexColor, darkText, setDarkText}) => {
+  let textColor = darkText ? "#000" : "#FFF"
+
   return (
     <div 
       className="ColorBox" 
-      style={{backgroundColor: color}}
+      style={{
+        backgroundColor: color,
+        color: textColor
+      }}
     >
-      {color ? color : "Empty value"}
+      <p>{color ? color : "Empty value"}</p>
+      <p>{hexColor ? hexColor : null}</p>
+      <button className="textButton" onClick={() => setDarkText(!darkText)}>
+        Use {darkText ? "Light" : "Dark"} Text
+      </button>
     </div>
   );
 }
