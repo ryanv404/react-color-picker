@@ -5,7 +5,8 @@ const ColorInputBox = ({value, onChange}) => {
         type="text" 
         id="color-input"
         value={value}
-        onChange={onChange}
+        onChange={onChange} 
+        placeholder="Enter a color name"
         />
     </div>
   );

@@ -4,7 +4,7 @@ const ColorBox = ({color}) => {
       className="ColorBox" 
       style={{backgroundColor: color}}
     >
-      {color}
+      {color ? color : "Empty value"}
     </div>
   );
 }
